@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+	 <link rel='stylesheet' href='/stylesheets/style.css' />
+	 <style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background-color: rgba(<%=pelicula.imagen.colorPredominante.Vibrant%>, 0.7);
+			width: 100%;
+			height: 100%;
+		}
+		body:before {
+			content: '';
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background-image: url(<%=pelicula.imagen.normal%>);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			-webkit-filter: blur(5px);
+			-moz-filter: blur(5px);
+			-o-filter: blur(5px);
+			-ms-filter: blur(5px);
+			filter: blur(5px);
+			z-index: -9;
+		}
+		.layer {
+			margin: 5px;
+			padding: 5px;
+		}
+	 </style>
+  </head>
+  <body>
+	  <div class="layer">
+			<a href="javascript:history.back()">Regresar</a>
+			<h1><%= title %></h1>
+			<table>
+				<tr>
+					<th>Ingles: </th>
+					<td><%=pelicula.ficha.nombreIngles%></td>
+				</tr>
+				<tr>
+					<th>Imagen: </th>
+					<td><img src="<%=pelicula.imagen.normal%>" height="427" width="300"></td>
+				</tr>
+				<tr>
+					<th>Color Predominante: </th>
+					<td><%=pelicula.imagen.colorPredominante.Vibrant%></td>
+				</tr>
+				<tr>
+					<th>Descripcion</th>
+					<td><%=pelicula.ficha.texto%></td>
+				</tr>
+				<tr>
+					<th>Video</th>
+					<td><%=pelicula.ficha.video%></td>
+				</tr>
+				<tr>
+					<th>Tiempo</th>
+					<td><%=pelicula.ficha.tiempo%></td>
+				</tr>
+				<tr>
+					<th>Genero</th>
+					<td><%=pelicula.ficha.genero%></td>
+				</tr>
+				<tr>
+					<th>Estreno</th>
+					<td><%=pelicula.ficha.estreno%></td>
+				</tr>
+				<tr>
+					<th>Director</th>
+					<td><%=pelicula.ficha.director%></td>
+				</tr>
+				<tr>
+					<th>Elenco</th>
+					<td><%=pelicula.ficha.elenco%></td>
+				</tr>
+				<tr>
+					<th>Guion</th>
+					<td><%=pelicula.ficha.guion%></td>
+				</tr>
+				<tr>
+					<th>Musica</th>
+					<td><%=pelicula.ficha.musica%></td>
+				</tr>
+			</table>
+	  </div>
+    
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	 <a href="javascript:history.back()">Regresar</a>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+	 <p>Welcome to <%= title %></p>
+	 <p>Listado (<%= peliculas.length%>):</p>
+	 <% for(var i=0; i< peliculas.length; i++) {%>
+	 	<a href="<%=peliculas[i].titulo%>/"><%=peliculas[i].titulo%></a><br>
+	 <% } %>
+  </body>
+</html>
