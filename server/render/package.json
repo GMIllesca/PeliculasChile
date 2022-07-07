@@ -25,7 +25,7 @@
     "http-errors": "~1.6.2",
     "iconv-lite": "^0.4.24",
     "image-downloader": "^3.4.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "morgan": "~1.9.0",
     "node-vibrant": "^3.0.0",
     "nodemon": "^1.18.6",
